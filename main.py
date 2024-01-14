@@ -37,6 +37,12 @@ while True:
             if event.key == pygame.K_DOWN and game.game_over == False: 
                 game.move_down()
                 game.update_score(0, 1)
+            if event.key == pygame.K_r and game.game_over == False: 
+                game.move_right()
+                game.move_right()
+            if event.key == pygame.K_e and game.game_over == False: 
+                game.move_left()
+                game.move_left()
             if event.key == pygame.K_UP and game.game_over == False:
                 game.rotate()
             if event.key == pygame.K_x and game.game_over == False:
@@ -61,4 +67,4 @@ while True:
     game.draw(screen)
     
     pygame.display.update()
-    clock.tick(60)
+    clock.tick(25)
